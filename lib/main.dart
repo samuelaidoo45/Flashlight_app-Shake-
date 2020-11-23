@@ -152,13 +152,53 @@ String lightoff(String string, int counter) {
 
 // This widget will be passed as Bottom Card's Widget.
 Widget bottomCardWidget() {
-  return Text(
-    'The Torch is On \nShake Phone Twice to Turn Off.',
-    style: TextStyle(
-      color: Colors.white,
-      fontSize: 12,
-      fontWeight: FontWeight.w500,
+  return Container(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Container(
+          height: 50,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 20,
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+        ),
+        Container(
+          child: Text('HIDE'),
+          height: 50,
+          width: 100,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 20,
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+        ),
+        // RaisedButton(
+        //     color: Colors.white, textColor: Colors.black, onPressed: null)
+      ],
     ),
-    textAlign: TextAlign.center,
   );
+  // return Text(
+  //   'The Torch is On \nShake Phone Twice to Turn Off.',
+  //   style: TextStyle(
+  //     color: Colors.white,
+  //     fontSize: 12,
+  //     fontWeight: FontWeight.w500,
+  //   ),
+  //   textAlign: TextAlign.center,
+  // );
 }
